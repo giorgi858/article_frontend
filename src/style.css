@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body {
+    background-color: rgb(255, 249, 249);
+
+}
+/* .App {
+    background-color: #fefefe;
+    height: 100vh;
+    width: 100%;
+  } */
+.active{
+    background-color: #1d4ed8;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e62ff;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+nav .title {
+    font-size: 1.5rem;
+    margin: 0.7rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+
+}
+
+nav ul {
+    display: flex;
+    margin: 0.3rem;
+}
+
+nav ul li {
+   list-style: none; 
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:not(.active):hover {
+    background-color:#172554 ;
+}
+
+nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.4rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+
+    cursor: pointer;
+}
+
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+
+@media (max-width: 580px) {
+   
+    nav .menu {
+        display: flex;
+     
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        
+        
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.1rem 0.5rem;
+    }
+}
+
+
+.form-homePage-main {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+
+.main-page-button {
+    width: 32%;
+    padding: 0.5rem; 
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem; 
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;  
+    background-color: #4879ff;
+    color: white;
+
+}
+.main-page-button:hover {
+    background-color: #8dabff;
+}
+.Login-Form, .register-Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    padding-bottom: 1rem;  
+}
+.needAccout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+
+}
+.needAccout span {
+    margin-left: 20px;
+    font-size: 1.7rem;
+   
+    
+}
+
+input[type="text"],
+input[type="password"],
+textarea, button {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin: 0.3rem;
+  width: 50%;
+}
+.loginDiv, .registerDiv {
+    margin-top: 2rem;
+    width: 100%;
+    height: 100vh;
+
+}
+
+label {
+  margin-top: 0.5rem;
+}
+
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* .line {
+    display: inline-block;
+}  */
+@media (max-width: 580px) {
+    /* input {
+        width: 50%;
+    } */
+}
+
+.signInBtn, .signUpBtn {
+    background-color: #88ff9e;
+    color: #333;
+    cursor: pointer;
+}
+.signUpBtn:hover, .signInBtn:hover {
+    background-color: #adffbc;
+}
+
+.WelcomeDiv, .articleDiv {
+    background-color: rgb(255, 249, 249);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.logoutBtn {
+  font-size: 20px;
+    background-color: rgb(255, 160, 160);
+  margin: 0 40px;
+
+}
+.logoutBtn:hover {
+    background-color: rgb(255, 198, 198);
+
+    cursor: pointer;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d4ed8;
+    color: whitesmoke;
+    position: sticky;
+    top: 0;
+    gap: 1.5rem;
+    height: 100px;
+}
+.fa-brands {
+    color: white;
+}
+.getReady{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.getRegister {
+    margin: 15px;
+}
+.aboutDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 249, 249);
+    margin-top: 3rem;
+}
+.aboutDiv h1 {
+    margin-bottom: 3rem;
+}
+.aboutDiv2 {
+    margin: 25px;
+}
+.mainDiv {
+    min-height: 70vh;
+}
